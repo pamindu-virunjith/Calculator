@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Calculator</title>
+    <link rel="stylesheet" href="style .css">
+</head>
+<body>
+    <main>
+        <section class="Calculator">
+            <div class="display">
+                <p id="num_display"></p>
+            </div>
+            <div class="number_pad">
+                <div>
+                    <button onclick="document.getElementById('num_display').innerHTML = ''">AC</button>
+                    <button  onclick="document.getElementById('num_display').innerText = document.getElementById('num_display').innerText.slice(0,-1)">DE</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '.'">.</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '/'">/</button>
+                </div>
+                <div>
+                    <button onclick="document.getElementById('num_display').innerHTML += '7'">7</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '8'">8</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '9'">9</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '*'">*</button>
+                </div>
+                <div>
+                    <button onclick="document.getElementById('num_display').innerHTML += '4'">4</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '5'">5</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '6'">6</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '-'">-</button>
+                </div>
+                <div>
+                    <button onclick="document.getElementById('num_display').innerHTML += '1'">1</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '2'">2</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '3'">3</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '+'">+</button>
+                </div>
+                <div>
+                    <button onclick="document.getElementById('num_display').innerHTML += '00'">00</button>
+                    <button onclick="document.getElementById('num_display').innerHTML += '0'">0</button>
+                    <button class="equal_btn"  onclick="document.getElementById('num_display').innerHTML = eval(document.getElementById('num_display').innerText)">=</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
